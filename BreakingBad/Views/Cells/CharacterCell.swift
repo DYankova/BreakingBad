@@ -24,7 +24,17 @@ class CharacterCell: UITableViewCell {
         cellView.layer.shadowRadius = 1.2
         cellView.layer.shadowOffset = .zero
         characterImageView.layer.cornerRadius = 12
-        
+        updateViewForUserInterfaceStyle()
+    }
+    
+    // Adjust background color for dark mode
+    func updateViewForUserInterfaceStyle() {
+        cellView.backgroundColor = traitCollection.userInterfaceStyle == .dark ? .systemGray6 : .white
+    }
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        updateViewForUserInterfaceStyle()
     }
 
     

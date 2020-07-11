@@ -10,12 +10,12 @@ import XCTest
 
 class BreakingBadUITests: XCTestCase {
 
-    override func setUpWithError() throws {
+    override func setUp() {
         continueAfterFailure = false
 
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         
     }
 
