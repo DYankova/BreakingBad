@@ -27,7 +27,7 @@ class BreakingBadUITests: XCTestCase {
         app.activate()
         let characterCell = app.tables/*@START_MENU_TOKEN@*/.staticTexts["Walter White"]/*[[".cells.staticTexts[\"Walter White\"]",".staticTexts[\"Walter White\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         expectation(for: NSPredicate(format: "exists = 1"), evaluatedWith: characterCell, handler: nil)
-        waitForExpectations(timeout: 10, handler: nil)
+        waitForExpectations(timeout: 20, handler: nil)
         characterCell.tap()
         
         XCTAssertTrue(app.scrollViews.otherElements.staticTexts[characterName].exists)
